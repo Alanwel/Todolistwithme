@@ -7,9 +7,8 @@ type Todo = {
   done: boolean;
 };
 export default function home(){
-const a = (alan,setAllan)
-const b = (Msg,SetMsg)
-
+const [todos, setTodos] = useState<Todo[]>([]); 
+const [input, setInput] = useState('');           
 
 
 }
