@@ -9,7 +9,13 @@ type Todo = {
 export default function home(){
 const [todos, setTodos] = useState<Todo[]>([]); 
 const [input, setInput] = useState('');           
+function addhandler(){
+if(input.trim()){
+  
+}
+}
+function deletehandler(){
 
-
+}
 }
 
