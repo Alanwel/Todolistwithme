@@ -7,7 +7,8 @@ type Todo = {
   done: boolean;
 };
 export default function home(){
-
+const a = (alan,setAllan)
+const b = (Msg,SetMsg)
 
 
 
