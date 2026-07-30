@@ -11,7 +11,7 @@ const [todos, setTodos] = useState<Todo[]>([]);
 const [input, setInput] = useState('');           
 function addhandler(){
 if(input.trim()==='')return;
-  setTodos([...todos,id:Date.now(),text:input,done: false]);
+  setTodos([...todos,{id:Date.now(),text:input,done: false}]);
   setInput('');
 }
 function deletehandler(id:number){
