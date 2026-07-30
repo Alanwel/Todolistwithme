@@ -14,30 +14,23 @@ if(input.trim()==='')return;
   setTodos([...todos,id:Date.now(),text:input,done: false]);
   setInput('');
 }
-function deletehandler(){
-
+function deletehandler(id:number){
+setTodos(todo.filter(todo=>todo.id!==id));
 }
-}
-
-
-  function handleDelete(id: number) {
-    setTodos(todos.filter(todo => todo.id !== id));
-  }
-
-  return (
-    <div className="min-h-screen bg-gray-100 p-8">
-      <h1>My Todo List</h1>
-      <input
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-      />
-      <button onClick={handleAdd}>Add</button>
-      {todos.map(todo => (
-        <div key={todo.id}>
-          {todo.text}
-          <button onClick={() => handleDelete(todo.id)}>Delete</button>
-        </div>
+  return(
+    <div ClassName = "min-h-screen bg-gray-100 p-8"> 
+    <h1> My TodoList app</h1>
+      <p>developed by allan day coding</p>
+      <input value ={input} onChange={(e)=>setInput(e.target.value)}/>
+      <button onClick={addhandler}>add me </button>
+      {todos.map(todo =>(
+      <div key ={todo.id }>
+        {todo.text}
+        <button onClick={()=>deletehandler(todo.id)}>Delete</button>
+      </div>
       ))}
     </div>
   );
-      }
+}
+
+  
