@@ -15,7 +15,7 @@ if(input.trim()==='')return;
   setInput('');
 }
 function deletehandler(id:number){
-setTodos(todo.filter(todo=>todo.id!==id));
+setTodos(todos.filter(todo=>todo.id!==id));
 }
   return(
     <div ClassName = "min-h-screen bg-gray-100 p-8"> 
