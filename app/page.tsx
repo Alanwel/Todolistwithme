@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState,useEffect} from 'react';
 
 // Define the Todo type OUTSIDE the component
 type Todo = {
