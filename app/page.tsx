@@ -13,7 +13,15 @@ export default function Home() {
   // useState INSIDE the component
   const [todos, setTodos] = useState<Todo[]>([]);
   const [input, setInput] = useState('');
-
+  //am creating my first useaeffect
+ useEffect(()=>{
+   const saved = localStorage.getItem(todos);
+   if(saved){
+     setTodos(json.parse(saved));
+   }
+ },[])
+  //my next useEffect 
+  useEffect(()={},[])
   // Handler to add a new todo
   function handleAdd() {
     if (input.trim() === '') return;  // don't add empty
