@@ -21,7 +21,9 @@ export default function Home() {
    }
  },[])
   //my next useEffect 
-  useEffect(()={},[])
+  useEffect(()={
+    localstorage.setItem('todos',json.Stringify('todos'));
+  },[todos]);
   // Handler to add a new todo
   function handleAdd() {
     if (input.trim() === '') return;  // don't add empty
@@ -29,7 +31,7 @@ export default function Home() {
       ...todos,
       { id: Date.now(), text: input, done: false }
     ]);
-    setInput('');  // clear input
+    setInput('');  // 
   }
 
   // Handler to delete a todo
