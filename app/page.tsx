@@ -21,7 +21,7 @@ export default function Home() {
    }
  },[])
   //my next useEffect 
-  useEffect(()={
+  useEffect(()=>{
     localstorage.setItem('todos',JSON.Stringify('todos'));
   },[todos]);
   // Handler to add a new todo
