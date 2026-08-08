@@ -15,14 +15,14 @@ export default function Home() {
   const [input, setInput] = useState('');
   //am creating my first useaeffect
  useEffect(()=>{
-   const saved = localstorage.getItem('todos');
+   const saved = localStorage.getItem('todos');
    if(saved){
      setTodos(JSON.parse(saved));
    }
  },[])
   //my next useEffect 
   useEffect(()=>{
-    localstorage.setItem('todos',JSON.stringify(todos));
+    localStorage.setItem('todos',JSON.stringify(todos));
   },[todos]);
   // Handler to add a new todo
   function handleAdd() {
